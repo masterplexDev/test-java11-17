@@ -7,6 +7,6 @@ RUN mvn clean package -DskipTests
 
 # 실행 스테이지
 FROM openjdk:11
-COPY --from=build /app/target/sist.war /sist.war
+COPY --from=build /app/target/spring_mvc.war /sist.war
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/sist.war"]
